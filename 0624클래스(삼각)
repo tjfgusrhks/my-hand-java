@@ -1,0 +1,43 @@
+import java.util.Scanner;
+//스캐너를 사용하기 위해서 불러오는 라이브러리(유틸리티 패키지)
+
+public class TriangleMain {
+	public static void main(String[] args) {
+		Triangle semo1 = new Triangle();
+		semo1.init();
+		semo1.info();
+	}
+}
+//메인 클래스. Triangle의 새로운 객체 semo1을 선언.
+// semo1을 초기화하는 메소드와 정보를 보여주는 메소드를 실행.
+
+class Triangle {
+	// field
+	double width;
+	double height;
+	Scanner sc = new Scanner(System.in);
+// Triangle이라는 클래스 생성.
+// double 로 선언하고.
+// 해당 클래스에서 scanner를 사용할 예정이므로 선언해준다.
+
+	// method
+
+	void init() {
+		System.out.println("너비를 입력 >>>");
+		width = sc.nextDouble();
+		System.out.println("높이를 입력 >>>");
+		height = sc.nextDouble();
+//호출시 실행되는 메소드 (init) -scanner로 너비를 받아서 width에 저장.
+	}
+
+	double calcArea() {
+		return (height * width / 2 );
+	}
+//호출시 double 형태의 값을 리턴해줌 - 넓이를 계산후 반환함.
+	void info() {
+		System.out.println("너비는 : " + width);
+		System.out.println("높이는 : " + height);
+		System.out.println("크기는 : "+ calcArea());
+	}
+}
+// 출력하는 메소드~
