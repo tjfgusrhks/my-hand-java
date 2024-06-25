@@ -1,0 +1,36 @@
+public class Ex02_Local {
+	//필드
+	String name;
+	int age;
+	String sn;
+	boolean isKorean;
+	//메소드
+	
+	void setLocalInfo(String nm, int a, String sonum) {
+		//이름, 나이, 주민등록 번호를 입력받아 초기화
+		// 주민등록번호 뒷자리의 첫번째 값이 1~4일 경우에 한국인
+		name = nm;
+		age = a;
+		sn = sonum;
+		if (sn.charAt(7)>='1' && sn.charAt(7)=<'4') { //0 부터 센다!!!:하이픈이 한자리 먹음
+			isKorean = true;
+		}else {
+			isKorean = false;                          //논리식을 잘 세우기
+		}
+	}
+	void setLocalInfo(String nm, int a) {
+		//이름,나이를 전달 받아 초기화
+		name = nm;
+		age = a;
+		
+	}
+	void output() {
+		//이름 ,나이, 주민번호, 한국인or 외국인 출력
+		//주민등록 번호가 없으면 "없음"으로 출력
+		System.out.println("이름 : "+ name);
+		System.out.println("나이 : "+ age);
+		System.out.println("주민번호 : " +(sn == null ? "없음" : sn));
+		System.out.println(isKorean ? "한국인" : "외국인");
+	}
+
+}
