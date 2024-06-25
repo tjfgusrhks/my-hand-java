@@ -1,0 +1,16 @@
+
+public class Ex02_LocalMain {
+	public static void main(String[] args) {
+		Ex02_Local local1 = new Ex02_Local();
+		local1.setLocalInfo("한씨", 20,"999999-1234567");
+		local1.output();
+		System.out.println("-----------------------");
+		
+		Ex02_Local local2 =new Ex02_Local();
+		local2.setLocalInfo("강씨", 30);
+		local2.output();
+		
+	}
+
+}
+//메인 실행창
