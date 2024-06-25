@@ -16,3 +16,19 @@ public class Ex03_RecursiveClass {
 }
 //재귀호출 연습
 //5회 출력후 종료
+/*
+public class Test_RecursiveCall {
+	
+	static void recursive(int n) {
+		if (n != 0) {
+			System.out.println("Hello");
+			recursive(--n);
+		}
+	}
+
+	public static void main(String[] args) {
+		recursive(5);
+	}
+
+}
+*/
