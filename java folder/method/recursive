@@ -1,0 +1,18 @@
+public class Ex03_RecursiveClass {
+	
+	static int count = 0;
+	
+	static void recursive() {
+		System.out.println("recursive("+(count+1)+") call");
+		count++;
+		if(count == 5) {
+			return; //recursive() 메소드 종료
+		}
+		recursive();		//재귀 호출
+	}
+	public static void main(String[] args) {
+		recursive();
+	}
+}
+//재귀호출 연습
+//5회 출력후 종료
