@@ -1,0 +1,20 @@
+package org.joonzis.ex;
+
+import java.util.Scanner;
+
+public class Ex01_RectManin {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Ex01_Rect nemo1 = new Ex01_Rect();
+		nemo1.setField(sc.nextInt(), sc.nextInt());
+		nemo1.output();
+		
+		System.out.println("------------------------");
+		
+		Ex01_Rect nemo2 = new Ex01_Rect();
+		nemo2.setField(20);
+		nemo2.output();
+	}
+
+}
+//main 화면
