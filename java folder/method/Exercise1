@@ -1,0 +1,33 @@
+public class Ex01_Rect {
+	
+	//필드
+	int width;
+	int height;
+	boolean isSquare;
+	
+	//너비, 높이, 정사각형 유무
+
+	//메소드
+	//필드 초기화 메소드
+	void setField(int w , int h) {
+		width = w;
+		height = h;
+		isSquare = (width == height) ? true : false ;//isSquare으로 (가로가 세로와 같은가?) ?(=3항연산자) 같으면 true, 다르면 false
+	}
+	void setField(int w ) { // setField라는 메소드 생성 후 int값을 받을 건데 받은 int 값을 w에 저장해서 쓸거야
+		width = w;            //저장한 w의 값을 width에 넣을거야
+		height = w;              //저장한 w의 값을 height에 넣을거야
+		isSquare = true;          //isSquare는 true 값을 넣을거야
+	}                            //setField를 호출시 해당 라인들이 실행된다.
+	int calcArea() {              //calcArea 라는 메소드를 생성-(메소드=함수) 받는 인자는 없어
+		return (width*height);      //int 형태의 값을 반환 할거야(전역 변수 width와 height를 연산 )
+	}
+	void output() {
+		System.out.println("너비 : "+ width);
+		System.out.println("높이 : "+ height);
+		System.out.println(isSquare ? "정사각형" : "직사각형");
+		System.out.println("크기 : "+ calcArea());
+	}                                                               //출력메소드
+
+
+}
